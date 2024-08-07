@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riwayat Transaksi - AmbaStore</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+        nav button {
+            background-color: #505050;
+            color: white;
+            border: none;
+            padding: 0px 3px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        nav button:hover {
+            background-color: #0056b3;
+        }
+        nav button a {
+            color: white;
+            text-decoration: none;
+            font-weight: 100;
+            font-size: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: white;
+            margin: 10px 0;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+        li img {
+            margin-right: 20px;
+        }
+        hr {
+            border: 1px solid #ccc;
+        }
+        footer h2, footer p, footer h4 {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <header>
+            <h1>AMBASTORE</h1>
+        </header>
+    </center>
+<center>
+    <nav>
+        <button><a href="index.html">Produk</a></button>
+        <button><a href="riwayat transaksi.html">Riwayat Transaksi</a></button>
+        <button><a href="tentang.html">Kontak Kami</a></button>
+        <button><a href="halaman keranjang.html">Keranjang</a></button>
+        <button><a href="invoice.html">Invoice</a></button>
+    </nav>
+</center>
+    <center>
+    <h1>Riwayat Transaksi</h1>
+    
+    <ul>
+        <hr>
+        <li>
+            <img src="img/mb2.webp" width="130">
+            <span>B760 ELITE - Rp. 5.000.000 - 01/10/2023</span>
+        </li>
+        <hr>    
+        <li>
+            <img src="img/mb3.webp" width="130">
+            <span>B760 ELITE AX - Rp. 4.000.000 - 04/10/2024</span>
+        </li>
+        <hr>
+        <li>
+            <img src="img/7900.webp" width="130">
+            <span>RX 7900 XTX - Rp. 16.000.000 - 05/27/2024</span>
+        </li>
+        <hr>
+    </ul>
+    <br>
+    <p>Total Transaksi: Rp. 25.000.000</p>
+    </center>
+    <br>
+    <hr>
+    <center>
+        <footer>
+            <h2>AMBASTORE </h2>
+            <p>Buka Setiap Hari, 10:00-18:00 WIB</p>
+            <h4>AmbaStore menghadirkan produk-produk Elektronik Komputer berkualitas dari brand-brand ternama seperti Notebook, Desktop PC, Komponen PC Rakitan, Sparepart, Printer, UPS, Gadget, Smartphone dan ratusan jenis produk aksesoris elektronik komputer. Dengan mengedepankan kualitas produk, kualitas layanan penjualan serta after-sales service.</h4>
+        </footer>
+    </center>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('nav button');
+            buttons.forEach(button => {
+                button.addEventListener('mouseover', function() {
+                    this.style.backgroundColor = '#555';
+                });
+                button.addEventListener('mouseout', function() {
+                    this.style.backgroundColor = '#333';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

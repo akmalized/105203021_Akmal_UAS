@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Saya - AmbaStore</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0056b3;
+            color: white;
+            padding: 20px;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+        nav button {
+            background-color: #505050;
+            color: white;
+            border: none;
+            padding: 0px 3px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        nav button:hover {
+            background-color: #0056b3;
+        }
+        nav button a {
+            color: white;
+            text-decoration: none;
+            font-weight: 100;
+            font-size: 20px;
+        }
+        .profile {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 120px auto;
+            max-width: 500px;
+        }
+
+        .profile img{
+            max-width: 90px;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <header>
+            <h1>AMBASTORE</h1>
+        </header>
+    </center>
+    <center>
+        <nav>
+            <button><a href="index.html">Produk</a></button>
+            <button><a href="riwayat transaksi.html">Riwayat Transaksi</a></button>
+            <button><a href="tentang.html">Kontak Kami</a></button>
+            <button><a href="halaman keranjang.html">Keranjang</a></button>
+            <button><a href="invoice.html">Invoice</a></button>
+        </nav>
+    </center>
+    <div class="profile">
+        <center>
+            <h1>Profil Saya</h1>
+            <img src="img/WhatsApp Image 2024-07-11 at 21.22.49_e88d1131.jpg">
+            <p>Nama: Muhammad Akmal Ramadhan</p>
+            <p>NIM: 10523021</p>
+            <p>Kelas: SI - 1</p>
+            <p>UAS</p>
+            <p>muhakmal.ra@gmail.com</p>
+        </center>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('nav button');
+            buttons.forEach(button => {
+                button.addEventListener('mouseover', function() {
+                    this.style.backgroundColor = '#45a049';
+                });
+                button.addEventListener('mouseout', function() {
+                    this.style.backgroundColor = '#4CAF50';
+                });
+            });
+
+            const profileDiv = document.querySelector('.profile');
+            profileDiv.addEventListener('click', function() {
+                alert('Ini adalah profil Muhammad Akmal Ramadhan');
+            });
+        });
+    </script>
+</body>
+</html>

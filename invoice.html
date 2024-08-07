@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice - AmbaStore</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+        nav button {
+            background-color: #505050;
+            color: white;
+            border: none;
+            padding: 0px 3px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        nav button:hover {
+            background-color: #0056b3;
+        }
+        nav button a {
+            color: white;
+            text-decoration: none;
+            font-weight: 100;
+            font-size: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .invoice {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .invoice h1, .invoice h2, .invoice h3 {
+            text-align: center;
+            color: #333;
+        }
+        .invoice p {
+            margin: 10px 0;
+            color: #555;
+        }
+        .invoice .total {
+            text-align: right;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+        .invoice .details {
+            margin: 20px 0;
+        }
+        .details p {
+            margin: 5px 0;
+        }
+        .separator {
+            border-bottom: 1px dashed #ccc;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <header>
+            <h1>AMBASTORE</h1>
+        </header>
+    </center>
+    <center>
+        <nav>
+            <button><a href="index.html">Produk</a></button>
+            <button><a href="riwayat transaksi.html">Riwayat Transaksi</a></button>
+            <button><a href="tentang.html">Kontak Kami</a></button>
+            <button><a href="halaman keranjang.html">Keranjang</a></button>
+            <button><a href="invoice.html">Invoice</a></button>
+        </nav>
+    </center>
+
+    <div class="container">
+        <div class="invoice">
+            <h1>Invoice AmbaStore</h1>
+            <div class="details">
+                <p><strong>Nama:</strong> <span id="invoice-nama"></span></p>
+                <p class="separator"></p>
+                <p><strong>Email:</strong> <span id="invoice-email"></span></p>
+                <p><strong>Alamat:</strong> <span id="invoice-telepon"></span></p>
+                <p><strong>Produk:</strong> <span id="invoice-produk"></span></p>
+                <p><strong>Jumlah:</strong> <span id="invoice-jumlah"></span></p>
+                <p><strong>Pesan Tambahan:</strong> <span id="invoice-pesan"></span></p>
+                <p class="separator"></p>
+                <p><strong>Tanggal Pembelian:</strong> <span id="invoice-tanggal"></span></p>
+                <p><strong>Jam Pembelian:</strong> <span id="invoice-jam"></span></p>
+            </div>
+            <h3>Terima kasih telah berbelanja di AmbaStore!</h3>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            document.getElementById('invoice-nama').textContent = urlParams.get('nama');
+            document.getElementById('invoice-email').textContent = urlParams.get('email');
+            document.getElementById('invoice-telepon').textContent = urlParams.get('telepon');
+            document.getElementById('invoice-produk').textContent = urlParams.get('produk');
+            document.getElementById('invoice-jumlah').textContent = urlParams.get('jumlah');
+            document.getElementById('invoice-pesan').textContent = urlParams.get('pesan');
+
+            const now = new Date();
+            const tanggal = now.toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' });
+            const jam = now.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+            document.getElementById('invoice-tanggal').textContent = tanggal;
+            document.getElementById('invoice-jam').textContent = jam;
+        });
+    </script>
+</body>
+</html>

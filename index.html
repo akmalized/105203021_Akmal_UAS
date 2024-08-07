@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Utama - AmbaStore</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .produk {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border-radius: 10px;
+        }
+        button {
+            background-color: #505050;
+            color: white;
+            border: none;
+            padding: 0px 3px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button a {
+            color: white;
+            text-decoration: none;
+            font-weight: 100;
+            font-size: 20px;
+        }
+        table {
+            width: 100%;
+            background-color: #f2f2f2;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        a {
+            color: #0056b3;
+            font-weight: bold;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .slider {
+            width: 80%;
+            position: relative;
+            overflow: hidden;
+        }
+        .slides {
+            width: 85%;
+            display: none;
+        }
+        .search-container {
+            text-align: center;
+            margin: 20px;
+        }
+        .search-input {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ddd;
+        }
+        .search-button {
+            padding: 10px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .search-button:hover {
+            background-color: #0056b3;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <center>
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Cari produk...">
+            <button class="search-button">Cari</button>
+        </div>
+        <table >
+            <tr>
+                <td valign="top">
+                    <table border="0" cellspacing="10">
+                        <tr>
+                            <td><h2>PRODUCTS</h2></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">AMD</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">NVIDIA</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">MEMORY</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">MOTHERBOARD</a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <video width="250" height="170" autoplay muted>
+                                    <source src="img/untuk web.mp4">
+                                </video>
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <hr>
+                    <p>AmbaStore adalah toko komputer yang</p>
+                    <p>menyediakan berbagai produk berkualitas.</p>
+                    <p>AmbaStore senantiasa berusaha untuk</p>
+                    <p>terus maksimal melayani kebutuhan anda</p>
+                    <p>dalam mendapatkan produk elektronik </p>
+                    <p>komputer yang anda butuhkan.</p>
+                    <p>Didukung oleh staff-staff profesional yang</p>
+                    <p>telah berpengalaman dalam memberikan</p>
+                    <p>rekomendasi produk serta spesifikasi</p>
+                    <p>yang sesuai dengan kebutuhan dan budget anda.</p>
+                    <hr>
+                </td>
+                <td valign="top">
+                    <center>
+                        <header>
+                            <h1>AMBASTORE</h1>
+                            <div class="hamburger-menu" onclick="toggleDropdownMenu()">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </header>
+                    </center>
+                    <center>
+                        <nav>
+                            <button><a href="index.html">Produk</a></button>
+                            <button><a href="riwayat transaksi.html">Riwayat Transaksi</a></button>
+                            <button><a href="tentang.html">Kontak Kami</a></button>
+                            <button><a href="halaman keranjang.html">Keranjang</a></button>
+                            <button><a href="invoice.html">Invoice</a></button>
+                        </nav>
+                        <br>    
+                        <!-- Slider Gambar -->
+                        <div class="slider">
+                            <img class="slides" src="img/99767d04-81bd-4bb8-9272-26cf1d356e4b.jpg.webp">
+                            <img class="slides" src="img/1bd7ef26-ef68-4eaf-b0b2-2cb7ed90da18.jpg.webp">
+                            <img class="slides" src="img/d96f0ba6-0d9d-466f-83b5-d608f8dc1d1e.jpg.webp">
+                        </div>
+                    </center>
+                    <br>
+                    <marquee>Welcome to AmbaStore - Buka Setiap Hari, 10:00-18:00 WIB  -----------------------  Welcome to AmbaStore - Buka Setiap Hari, 10:00-18:00 WIB</marquee>
+
+                    <center>
+                        <table border="0" cellspacing="20">
+                            <tr>
+                                <td>
+                                    <div class="produk">
+                                        <strong><h2>RTX 4060 TI AERO</h2></strong>
+                                        <img src="img/300.webp" width="260" height="250">
+                                        <div>
+                                            <span>Rp. 8.000.000</span>
+                                            <button>
+                                                <a href="input_transaksi.html">BUY </a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="produk">
+                                        <strong><h2>RTX 4090 EXTREME</h2></strong>
+                                        <img href="input_transaksi.html" src="img/4090to.webp" width="260" height="250">
+                                        <div>
+                                            <span>Rp. 36.000.000</span>
+                                            <button ><a href="input_transaksi.html">BUY  </a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="produk">
+                                        <strong><h2>RTX 4060 TI GAMING</h2></strong>
+                                        <img src="img/3090.webp" width="260" height="250">
+                                        <div>
+                                            <span>Rp. 7.000.000</span>
+                                            <button>
+                                                <a href="input_transaksi.html">BUY </a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <hr />
+                            <tr>
+                                <td>
+                                    <div class="produk">
+                                        <strong><h2>RX 7900 XTX</h2></strong>
+                                        <img src="img/7900.webp" width="260" height="220">
+                                        <div>
+                                            <span>Rp. 16.000.000</span>
+                                            <button>
+                                                <a href="input_transaksi.html">BUY </a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="produk">
+                                        <strong><h2>Z790 XTREME X ICE</h2></strong>
+                                        <img src="img/mb1.webp" width="260" height="220">
+                                        <div>
+                                            <span>Rp. 11.000.000</span>
+                                            <button>
+                                                <a href="input_transaksi.html">BUY </a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="produk">
+                                        <strong><h2>B760 ELITE</h2></strong>
+                                        <img src="img/mb2.webp" width="260" height="220">
+                                        <div>
+                                            <span>Rp. 5.000.000</span>
+                                            <button>
+                                                <a href="input_transaksi.html">BUY </a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 
+                                <td>
+                                    <div class="produk">
+                                        <strong><h2>WATERCOOLER II 360</h2></strong>
+                                        <img src="img/cpuc.webp" width="260" height="220">
+                                        <div>
+                                            <span>Rp. 3.000.000</span>
+                                            <button>
+                                                <a href="input_transaksi.html">BUY </a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                               
+                                <td>
+                                    <div class="produk">
+                                        <strong><h2>B760 ELITE AX</h2></strong>
+                                        <img src="img/mb3.webp" width="260" height="220">
+                                        <div>
+                                            <span>Rp. 4.000.000</span>
+                                            <button>
+                                                <a href="input_transaksi.html">BUY </a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="produk">
+                                        <strong><h2>X570 AERO G</h2></strong>
+                                        <img src="img/mb4.webp" width="280" height="220">
+                                        <div>
+                                            <span>Rp. 6.000.000</span>
+                                            <button>
+                                                <a href="input_transaksi.html">BUY </a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </center>
+                    <hr>
+                <center>
+                    <footer>
+                        <h2>AMBASTORE </h2>
+                        <p>Buka Setiap Hari, 10:00-18:00 WIB</p>
+                        <h4>AmbaStore menghadirkan produk-produk Elektronik Komputer berkualitas dari brand-brand ternama seperti Notebook, Desktop PC, Komponen PC Rakitan, Sparepart, Printer, UPS, Gadget, Smartphone dan ratusan jenis produk aksesoris elektronik komputer. Dengan mengedepankan kualitas produk, kualitas layanan penjualan serta after-sales service.</h4>
+                    </footer>
+                </center>
+                </td>
+            </tr>
+        </table>
+    </center>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const produk = document.querySelectorAll('.produk');
+            produk.forEach(function(item) {
+                item.addEventListener('mouseover', function() {
+                    this.style.transform = 'scale(1.05)';
+                });
+                item.addEventListener('mouseout', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+        });
+
+        function toggleDropdownMenu() {
+            var menu = document.querySelector('.dropdown-menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+    </script>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("slides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 2000);
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang Belanja - AmbaStore</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+        nav button {
+            background-color: #505050;
+            color: white;
+            border: none;
+            padding: 0px 3px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        nav button:hover {
+            background-color: #0056b3;
+        }
+        nav button a {
+            color: white;
+            text-decoration: none;
+            font-weight: 100;
+            font-size: 20px;
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: white;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .cart-item img {
+            max-width: 100px;
+            border-radius: 5px;
+        }
+        .cart-item span {
+            flex: 1;
+            margin: 0 10px;
+        }
+        .cart-item button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .cart-item button:hover {
+            background-color: darkred;
+        }
+        .total, .checkout {
+            text-align: right;
+            margin: 10px 0;
+        }
+        .checkout button {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .checkout button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <header>
+            <h1>AMBASTORE</h1>
+        </header>
+    </center>
+<center>
+    <nav>
+        <button><a href="index.html">Produk</a></button>
+        <button><a href="riwayat transaksi.html">Riwayat Transaksi</a></button>
+        <button><a href="tentang.html">Kontak Kami</a></button>
+        <button><a href="halaman keranjang.html">Keranjang</a></button>
+        <button><a href="invoice.html">Invoice</a></button>
+    </nav>
+</center>
+
+    <h2>Keranjang Belanja</h2>
+    <div id="cart">
+        <div class="cart-item">
+            <img src="img/4090to.webp" alt="Item 1">
+            <span>RTX 4090 EXTREME</span>
+            <span class="price">Rp. 36.000.000</span>
+            <button onclick="removeItem(this)">Hapus</button>
+        </div>
+        <hr>
+        <div class="cart-item">
+            <img src="img/mb1.webp" alt="Item 2">
+            <span>Z790 XTREME X ICE</span>
+            <span class="price">Rp. 12.400.000</span>
+            <button onclick="removeItem(this)">Hapus</button>
+        </div>
+        <hr>
+        <div class="cart-item">
+            <img src="img/cpuc.webp" alt="Item 3">
+            <span>WATERCOOLER II 360</span>
+            <span class="price">Rp. 3.000.000</span>
+            <button onclick="removeItem(this)">Hapus</button>
+        </div>
+        <hr>
+        <div class="total">
+            Total: <span id="total-price">Rp. 51.400.000</span>
+        </div>
+        <div class="checkout">
+            <button onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <center>
+        <footer>
+            <h2>AMBASTORE </h2>
+            <p>Buka Setiap Hari, 10:00-18:00 WIB</p>
+            <h4>AmbaStore menghadirkan produk-produk Elektronik Komputer berkualitas dari brand-brand ternama seperti Notebook, Desktop PC, Komponen PC Rakitan, Sparepart, Printer, UPS, Gadget, Smartphone dan ratusan jenis produk aksesoris elektronik komputer. Dengan mengedepankan kualitas produk, kualitas layanan penjualan serta after-sales service.</h4>
+        </footer>
+    </center>
+    <script>
+        function removeItem(button) {
+            const item = button.parentElement;
+            item.style.display = 'none';
+            updateTotal();
+        }
+
+        function updateTotal() {
+            let total = 0;
+            const prices = document.querySelectorAll('.cart-item:not([style*="display: none"]) .price');
+            prices.forEach(price => {
+                total += parseInt(price.textContent.replace(/[^0-9]/g, ''));
+            });
+            document.getElementById('total-price').textContent = 'Rp. ' + total.toLocaleString('id-ID');
+        }
+
+        function checkout() {
+            let invoiceItems = [];
+            const items = document.querySelectorAll('.cart-item:not([style*="display: none"])');
+            items.forEach(item => {
+                const name = item.querySelector('span:nth-child(2)').textContent;
+                const price = item.querySelector('.price').textContent;
+                invoiceItems.push(`${name}: ${price}`);
+            });
+
+            const total = document.getElementById('total-price').textContent;
+            const invoiceText = `
+Invoice AmbaStore:
+${invoiceItems.join('\n')}
+------------------------
+Total: ${total}
+
+Terima kasih telah berbelanja di AmbaStore!`;
+
+            alert(invoiceText);
+        }
+    </script>
+</body>
+</html>

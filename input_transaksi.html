@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Transaksi - AmbaStore</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+        nav button {
+            background-color: #505050;
+            color: white;
+            border: none;
+            padding: 0px 3px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        nav button:hover {
+            background-color: #0056b3;
+        }
+        nav button a {
+            color: white;
+            text-decoration: none;
+            font-weight: 100;
+            font-size: 20px;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <header>
+            <h1>AMBASTORE</h1>
+        </header>
+    </center>
+    <center>
+        <nav>
+            <button><a href="index.html">Produk</a></button>
+            <button><a href="riwayat transaksi.html">Riwayat Transaksi</a></button>
+            <button><a href="tentang.html">Kontak Kami</a></button>
+            <button><a href="halaman keranjang.html">Keranjang</a></button>
+            <button><a href="invoice.html">Invoice</a></button>
+        </nav>
+    </center>
+    <center>
+        <h2>Transaksi</h2>
+        <form id="transaksiForm" action="invoice.html" method="get" style="max-width: 400px; margin: 0 auto; padding: 20px; background-color: #fff;">
+            <label for="nama">Nama:</label><br>
+            <input id="nama" name="nama" placeholder="Masukkan nama lengkap" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input id="email" name="email" placeholder="Masukkan alamat email" required><br><br>
+
+            <label for="telepon">Alamat:</label><br>
+            <input id="telepon" name="telepon" placeholder="Masukkan alamat" required><br><br>
+
+            <label for="produk">Produk:</label><br>
+            <select id="produk" name="produk" required>
+                <option value="">Pilih Produk</option>
+                <option value="RTX 4060 TI AERO">RTX 4060 TI AERO</option>
+                <option value="RTX 4090 EXTREME">RTX 4090 EXTREME</option>
+                <option value="Z790 XTREME X ICE">Z790 XTREME X ICE</option>
+                <option value="B760 ELITE">B760 ELITE</option>
+                <option value="WATERCOOLER II 360">WATERCOOLER II 360</option>
+                <option value="X570 AERO G">X570 AERO G</option>
+            </select><br><br>
+
+            <label for="jumlah">Jumlah:</label><br>
+            <input id="jumlah" name="jumlah" placeholder="Masukkan jumlah produk" required><br><br>
+
+            <label for="pesan">Pesan Tambahan:</label><br>
+            <textarea id="pesan" name="pesan" placeholder="Masukkan pesan tambahan"></textarea><br><br>
+
+            <input type="submit" value="Checkout">
+        </form>
+    </center>
+    <br>
+    <hr>
+    <center>
+        <footer>
+            <h2>AMBASTORE</h2>
+            <p>Buka Setiap Hari, 10:00-18:00 WIB</p>
+            <h4>AmbaStore menghadirkan produk-produk Elektronik Komputer berkualitas dari brand-brand ternama seperti Notebook, Desktop PC, Komponen PC Rakitan, Sparepart, Printer, UPS, Gadget, Smartphone dan ratusan jenis produk aksesoris elektronik komputer. Dengan mengedepankan kualitas produk, kualitas layanan penjualan serta after-sales service.</h4>
+        </footer>
+    </center>
+</body>
+</html>
